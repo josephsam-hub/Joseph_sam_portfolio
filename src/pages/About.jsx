@@ -14,16 +14,25 @@ const About = () => {
       <h1 className='head-text'>
         Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
-          {" "}
-          Adrian
+          Joseph Sam
         </span>{" "}
         👋
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+          AI/ML Engineer based in Coimbatore, Tamil Nadu, India — specializing
+          in <strong>Agentic AI</strong>, <strong>Computer Vision</strong>, and{" "}
+          <strong>NLP</strong>. Expert in LangChain, LangGraph, LLM
+          orchestration, and multi-agent systems. I build production AI
+          solutions integrating vector databases, generative AI APIs, and deep
+          learning models.
+        </p>
+        <p>
+          Currently pursuing B.Tech in Artificial Intelligence & Data Science at
+          Sri Eshwar College of Engineering (CGPA: 8.89). National hackathon
+          finalist with a ₹1 Lakh cash prize, IIT Bombay E-Yantra finalist, and
+          active open-source contributor to Google Timesketch.
         </p>
       </div>
 
@@ -50,25 +59,33 @@ const About = () => {
         <h3 className='subhead-text'>Work Experience.</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
+            I've worked across AI research, internships, and national
+            competitions — leveling up my skills and building real-world impact.
+            Here's the rundown:
           </p>
         </div>
 
         <div className='mt-12 flex'>
           <VerticalTimeline>
-            {experiences.map((experience, index) => (
+            {experiences.map((experience) => (
               <VerticalTimelineElement
                 key={experience.company_name}
                 date={experience.date}
                 iconStyle={{ background: experience.iconBg }}
                 icon={
                   <div className='flex justify-center items-center w-full h-full'>
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className='w-[60%] h-[60%] object-contain'
-                    />
+                    <span
+                      style={{
+                        fontSize: "10px",
+                        fontWeight: "bold",
+                        color: "#333",
+                        textAlign: "center",
+                        lineHeight: 1.2,
+                        padding: "2px",
+                      }}
+                    >
+                      {experience.company_name.slice(0, 2).toUpperCase()}
+                    </span>
                   </div>
                 }
                 contentStyle={{
